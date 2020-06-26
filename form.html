@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" type="text/css">
+ <link href="css/UIstyle.css" rel="stylesheet">
+<meta charset="UTF-8"> 
+
+<title>Edible Plants of Ireland</title>
+</head>
+
+
+<body>
+
+
+
+<div class ="ui grid container">
+<header class="fifteen wide column">
+<span class="ml10">
+<h1 class= "ui left aligned stackable column grid segment huge" > <img class="figure" src="images/home2.jpg" alt="house">
+<span class="text-wrapper">
+<span class="letters">Edible Plants of Ireland</span> </h1>
+  </span></span>
+
+
+
+</header>
+
+
+
+
+
+
+<nav class="ui vertical left menu  ">
+  <a class="item"  href="index.html">   
+  Plants    
+  </a>
+  <a class="item" href="seaweed.html">
+    Seaweed    
+  </a>
+  <a class="item" href="garden.html">
+    Garden    
+  </a>
+  <a class="item" href="recipes.html">
+  Cooking
+  </a>
+  <a class="item" href="about.html">
+    About me    
+  </a>
+  <a class="active item" href="form.html">
+    Club & Events
+  </a>
+</nav>
+
+
+
+
+
+
+
+
+<main class="ui twelve wide computer column raised grid segment">
+
+<p> To enjoy our club please enter your details bellow, and we will email you with our principal Events, Cooking club dates and Festivals.</p>
+<blockquote> ***This is a fake website that have been created as a project for the Web Development, on Waterford Intitute of Technology, This form is not real*** </blockquote>
+
+<form action="process.html" method="post" id = "contact" class="ui form">
+
+
+  <div class="inline field">
+    <label for="contactname"  class="three wide field">Contact Name</label>	
+	 <input type="text" id="contactname"  name="contactname" autofocus required pattern = "[A-Z][a-z]+( [A-Z][a-z]+)*" class="eight wide field" title="Please enter a name (Surname optional) with First Letter capitalised">
+  </div>
+  
+<div class = "inline field">
+<label  class="three wide field">Telephone Number </label>
+<input type="tel" name="phonenumber" pattern = "^((\d{3})|\d{3})-?\d{6,9}$" required id="phonenumber" size="3" class = "seven wide field">
+<p>
+</div>
+  
+  
+  <div class = "inline field">
+<label for = "email" class="three wide field">Email Address: </label>
+<input type="email" name="email" id="email" size="20" required pattern = "^[_a-z0-9-]+(.[_a-z0-9-]+)@[a-z0-9-]+(.[a-z0-9-]+)(.[a-z]{2,4})$" class = "seven wide field">
+</div>
+
+
+
+<div class = "inline field">
+
+
+ </div>
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+  <div class="inline grouped fields">
+	  <div>
+	  <label style="float:left">Please Select your main interest to enjoy our club:</label>
+	  </div>
+	  
+      <div class="inline field">
+        <div class="ui radio checkbox">
+          <input type="radio" name="interest" checked="" id = "EdiblePlants" value = "Edible Plants">
+          <label for = "EdiblePlants" >Edible Plants</label>
+        </div>
+      </div>
+      <div class="field">
+        <div class="ui radio checkbox">
+          <input type="radio" name="interest"  id = "Seaweed" value = "Seaweed">
+          <label for = "Seaweed">Seaweed</label>
+        </div>
+      </div>
+      <div class="field">
+        <div class="ui radio checkbox">
+          <input type="radio" name="interest" id = "Gardering" value = "Gardering">
+          <label for = "Gardering">Gardering</label>
+        </div>
+      </div>
+      <div class="field">
+        <div class="ui radio checkbox">
+          <input type="radio" name="interest" id ="Cooking" value = "Cooking">
+          <label for = "Cooking">Cooking / Recipes </label>
+        </div>
+      </div>
+    </div>
+	
+	<label >On a scale of 1 to 10, How good do you consider this website: </label>
+<input type = "range" name = "rating" id = "rating" min = "1" max = "10">
+
+	
+	 <div class="ui right floated segment">
+  <p>Choose a Username and Password Bellow:</p>
+  <label for = "user">Username: </label>
+<input type="text" name="user" id="user" size="8">
+<p><label for = "pass">Password: (UpperCase, LowerCase and Number, minimum 6 characteres )</label>
+<input type="password" name="pass"  pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$ .{6,}$" id="pass" size="8"></p>
+</div>
+
+
+    <div class="field">
+	    <label for = "comments">Comments</label>
+	    <textarea id = "comments" name = "comments"></textarea>
+    </div>
+	 <div class="field">
+    <div class="ui checkbox">
+      <input type="checkbox" id = "TandC"  name ="TandC">
+      <label for = "TandC">I agree to the Terms and Conditions</label>
+    </div>
+	<input type="reset" value = "Clear the info" class="ui blue button" style="align right">
+<input type="submit" value = "Send us the info" class="ui blue button">
+
+  </div>
+  
+        <form id="newItemForm">
+		
+		
+		<label for="special">Check this box if you want to receive e-mails about Events, products, and free magazines<input type="checkbox" id="special" value=" The Edible Plants magazine." style="clear:left;float:left"></label>
+      </form>
+	  <div id="userSelection"></div>
+    </div>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>	
+<script type="text/javascript" src="js/animations.js"></script>
+<script src="js/jquery.flip.min.js"></script> 
+<script src="js/jquery.easy_slides.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+  
+  
+  
+
+  
+  
+</form>
+ </main>
+
+
+
+
+<!-- UI component that we have not covered in class  -->
+<div class="ui center aligned row message">
+  <div class="header ">
+     Be Part of our Club >>> 
+  </div>
+  <p> <a class="item" href="form.html">
+     Click here to go to our Form Page !    
+  </a> </p>
+</div>
+<!-- UI component that we have not covered in class  -->
+
+
+
+
+<footer class="ui center aligned row">
+ <div class = "column">
+<p>© 2018 KellyNagyBertels - kellybertels.000webhostapp.com </p>
+
+</div>
+</footer>
+</div>
+
+
+
+</body>
+
+</html>

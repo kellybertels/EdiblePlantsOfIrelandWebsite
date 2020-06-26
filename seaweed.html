@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" type="text/css">
+ <link href="css/UIstyle.css" rel="stylesheet">
+<meta charset="UTF-8"> 
+
+<title>Edible Plants of Ireland</title>
+</head>
+
+
+<body>
+
+<div class ="ui grid container">
+<header class="fifteen wide column">
+<span class="ml10">
+<h1 class= "ui left aligned stackable column grid segment huge" > <img class="figure" src="images/seaweedicon.png" alt="seaweed">
+<span class="text-wrapper">
+<span class="letters">Edible Plants of Ireland</span> </h1>
+  </span></span>
+
+</header>
+
+
+
+
+
+
+<nav class="ui vertical left menu  ">
+  <a class="item"  href="index.html">   
+  Plants    
+  </a>
+  <a class="active item" href="seaweed.html">
+    Seaweed    
+  </a>
+  <a class="item" href="garden.html">
+    Garden    
+  </a>
+  <a class="item" href="recipes.html">
+  Cooking
+  </a>
+  <a class="item" href="about.html">
+    About me    
+  </a>
+   <a class="item" href="form.html">
+    Club & Events
+  </a>
+  <p>Click on the items of this page for a fun animation.</p>
+   <p>*Refresh the page to reset!</p>
+</nav>
+
+
+
+
+
+
+
+
+<main class="ui twelve wide computer column raised grid segment">
+
+
+<p>Edible Seaweed can be found all around Ireland</p> 
+
+
+<p>One of the most important things to check before you go forage for seaweed is if the beach is clean, check if your seaweed is atached to a rock, it means she is alive and fresh</p>
+
+<p>there is seaweeds that are more tasty than others, and easy to add in salads, other varieties are used on beauty therapy</p>
+
+<article>
+
+
+ <h2> Sustainable foraging of Seaweed</h2>
+
+<ul>
+<li>Collect seaweed during the growing season only.</li>
+<li>Take only what you need, it is illegal harvest seaweed for sale without a licence.</li>
+<li>Cut half or less of the plant, allowing the rest to re-grow. Don’t Remove the holdfast part, it is the plants roots attached to a rock.</li>
+<li>Use a sharp knife or scissors.</li>
+<li>Rinse the seaweed in clean seawater to removing any small creatures which may be attached.</li>
+<li>Collect from multiple areas, rather than clearing all plants from one area.</li> 
+</ul>
+</article>
+
+ </main>
+
+<div class="ui vertical left  four wide menu">
+
+
+<!-- UI component that we have not covered in class  -->
+<div class="ui center aligned row message">
+  <div class="header ">
+     Be Part of our Club
+  </div>
+  <p> <a class="item" href="form.html">
+     Click here to go to our Form Page !    
+  </a> </p>
+</div>
+<!-- UI component that we have not covered in class  -->
+
+</div>
+
+<section class= "ui twelve wide column center piled grid segment ">
+<h2> Sea Lettuce</h2>
+<p><i>Ulva lactuca</i></p>
+
+<figure class="right">
+<img src="images/sealettuce_diagram.jpg"   alt="Ulva Lactuca Diagram" width="250" height="190" >
+<figcaption>Ulva Lactuca Diagram<br>
+<span>[Photograph Ref: http://tshirtmaker.me/diagram-of-ulva.html/ulva-lactuca-wikipedia-diagram-of]</span>
+</figcaption>
+</figure> 
+  
+  
+
+
+
+<p>The sea Lettuce it is one of the most mild seaweeds, easy to eat and full of vitamins</p>
+<p>It's a bright green seaweed with wide, wary fronds, very like lettuce,its atached by a small hodfast. </p>
+<p>Grows rapidly in summer</p>
+<p>Similar in colour to Eteromorpha(gutweed) but sea lettuce fronds are much wider</p>
+<figure>
+<img src="images/sealettuce.jpg" alt="Ulva Lactuca" width="250" height="190" class="img_oval">
+<figcaption>The sea Lettuce it is transparent, and delicate<br>
+<span>[Photograph Ref: https://www.biolib.cz/IMG/GAL/7080.jpg]</span>
+</figcaption>
+</figure> 
+
+
+
+
+<blockquote>Reference Book: The Sea Garden: Aguide to Seaweed Cookery & Foraging, Author: Marie Power  </blockquote> 
+
+<h3> How to pick</h3>
+<ul>
+<li>Gather through summer, plants do get tougher when older. </li>
+<li>Avoid collecting near seawage or run-off from agricultural land as it may be contaminated.</li>
+<li>Do not gather in late winter/early spring when plant is fertile.</li>
+</ul>
+
+
+
+</section>
+ 
+ 
+ 
+
+
+<!-- UI component that we have not covered in class  -->
+<div class="ui center aligned row message">
+  <div class="header ">
+     Be Part of our Club >>> 
+  </div>
+  <p> <a class="item" href="form.html">
+     Click here to go to our Form Page !    
+  </a> </p>
+</div>
+<!-- UI component that we have not covered in class  -->
+
+
+
+
+<footer class="ui center aligned row">
+ <div class = "column">
+<p>© 2018 KellyNagyBertels - kellybertels.000webhostapp.com </p>
+
+</div>
+</footer>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>	
+<script type="text/javascript" src="js/animations.js"></script>
+<script src="js/jquery.flip.min.js"></script> 
+<script src="js/jquery.easy_slides.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+<script>
+$(function() {
+  $('h2').hide().slideDown();
+
+  $('li').hide().each(function(index) {
+    $(this).delay(800 * index).fadeIn(800);
+  });
+
+$('li').on({
+	mouseover:function(){
+		
+		$(this).animate({
+			paddingLeft:"+=10"
+		},800);	
+		
+	},
+	
+	mouseout:function(){
+		
+		$(this).animate({
+			paddingLeft:"-=10"
+		},800);
+		
+		
+	},
+	
+	click:function(){
+		$(this).animate({
+      opacity: 4,
+	   letterSpacing: "+=5",
+     
+    }, 800, function() {
+    
+    });		
+				
+	}	
+		
+	});
+
+	});
+	
+	
+
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,196 @@
+
+.ui.container {
+  margin-top:1em;
+  
+}
+
+
+
+/* Vertical Menu */
+nav.ui.vertical.menu {
+    margin-bottom:1em;
+	border:none;
+	border-radius: 0.28571429rem 0.28571429rem  !important;
+
+}
+h1.ui img {
+    height: 100px;
+    width: 128px;
+    float: left;
+}
+
+
+/* Menu items */
+nav.ui.vertical.menu .item {
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	background-color:#B8CF65;
+    font-weight:bold;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	text-transform: uppercase;
+	font-size:90%;	 
+	margin-bottom:.4em;
+	border-radius: 0.28571429rem 0.28571429rem  !important;
+}
+
+/* Hover */
+
+nav.ui.vertical.menu .item:hover {
+    background-color:#CACEAD;
+    color:#B54201;
+    border-radius: 0.28571429rem 0.28571429rem  !important;
+    border-color: #9FB6CD;
+	
+	
+	
+}
+
+/* Active */
+
+nav.ui.vertical.menu .active.item {
+    background-color:#E7D8C1;
+    color:#B54201;
+    border-color: #256290;
+	border-radius: 0.28571429rem 0.28571429rem  !important;
+}
+
+
+
+
+section.piled.grid.segment {
+	border: solid black 2px;
+	border-color:#C2D4AC; /* light botanic Green */
+	font-family:Lora;
+	font-size:155%;
+	
+}
+main.raised.grid.segment{
+	border:solid 3px #508104; /* lemony green */
+	font-family:Lora;
+	font-size:155%;
+	
+}
+
+footer{
+	background-color: 	#703628; /* Dark Brown*/
+	color:	#F6AD73; /* Orange*/
+	
+	
+
+
+}
+
+
+
+/* HTML OLD STYLE part */
+section, main{
+text-align:justify;
+background-color:white;
+padding-bottom:.5em;
+padding-top:.1em;
+padding-left:2em;
+padding-right:2em;
+font-size:150%;
+margin-bottom:1em;
+
+}
+
+
+main {
+	border-style:dotted;
+	border-width:3px;
+	border-color:#508104; /* lemony green */
+
+	
+	
+}
+
+section{
+	border-width:3px;
+	border-color:#C2D4AC; /* light botanic Green */
+	border-style:dashed;
+
+	
+}
+body{
+ background-color: white;
+ color: black;
+ font-family: Lora;
+ background-image: url(../images/plant3.png);
+ background-repeat: no-repeat;
+ background-position:top right;
+ 
+ 
+ 
+ 
+  background-image: url(../images/plant3.png);
+   background-image: url(../images/plant3.png);
+    background-image: url(../images/plant3.png);
+}
+
+
+figure figcaption{
+	text-align: center;
+	font-style:italic;
+	font-size:.80em;
+	position:relative;
+}
+
+blockquote{
+ font-size:15px;	
+ text-indent:20px;	
+}
+
+p {
+  text-align:justify;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+	padding-right: 10px;
+}
+
+
+.flip {
+    height: 199px;
+    width: 300px;
+    margin: 0 auto;
+
+}
+.flip #right img {
+    width: 300px;
+    height: auto;
+	
+}
+.flip .back {
+    background: #E7D8C1;
+    color: black;
+    text-align: center;
+	border-radius: 60rem 60rem ;
+}
+
+
+
+.ml10 {
+  position: relative;
+  font-weight: 900;
+  font-size: 10em;
+}
+
+.ml10 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.2em;
+  padding-right: 0.05em;
+  padding-bottom: 0.1em;
+  overflow: hidden;
+}
+
+.ml10 .letter {
+  display: inline-block;
+  line-height: 5em;
+  transform-origin: 0 0;
+}

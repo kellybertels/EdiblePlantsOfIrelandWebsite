@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" type="text/css">
+ <link href="css/UIstyle.css" rel="stylesheet">
+<meta charset="UTF-8"> 
+
+<title>Edible Plants of Ireland</title>
+</head>
+
+
+<body>
+
+
+<div class ="ui grid container">
+<header class="fifteen wide column">
+<span class="ml10">
+<h1 class= "ui left aligned stackable column grid segment huge" > <img class="figure" src="images/pot.ico" alt="cooking">
+<span class="text-wrapper">
+<span class="letters">Edible Plants of Ireland</span> </h1>
+  </span></span>
+
+  
+  
+
+  
+</header>
+
+
+
+
+
+
+<nav class="ui vertical left menu  ">
+  <a class="item"  href="index.html">   
+  Plants    
+  </a>
+  <a class="item" href="seaweed.html">
+    Seaweed    
+  </a>
+  <a class="item" href="garden.html">
+    Garden    
+  </a>
+  <a class="active item" href="recipes.html">
+  Cooking
+  </a>
+  <a class="item" href="about.html">
+    About me    
+  </a>
+   <a class="item" href="form.html">
+    Club & Events
+  </a>
+</nav>
+
+
+
+
+
+
+
+
+<main class="ui twelve wide computer column raised grid segment">
+
+<p>Here you will find all kind of recipes that you can cook with Wild Edible Plants, founded easily anywhere in Ireland</p>
+<p> Cooking with Wild Edible Plants can add an exotic flavour to your meal, and impress your guests</p> 
+
+ </main>
+ 
+<div class="ui vertical left  four wide menu">
+
+
+<!-- UI component that we have not covered in class  -->
+<div class="ui center aligned row message">
+  <div class="header ">
+     Be Part of our Club
+  </div>
+  <p> <a class="item" href="form.html">
+     Click here to go to our Form Page !    
+  </a> </p>
+</div>
+
+<div><p>This is an Interative Webpage, move the ingredients to left or right to organize the ones that you have or not. </p>
+<p>Refresh the page to reset!</p>
+<p>
+Click on the paragraphs of "How to cook" section to fade out the steps that you have completed.  </p></div>
+<!-- UI component that we have not covered in class  -->
+
+</div>
+
+<section class= "ui twelve wide column center piled grid segment ">
+
+
+<article>
+
+
+
+
+
+
+<!--HANDLEBARS PART DOWN HERE -->
+<script id = "handlebar" type="text/x=handlebars-template">
+<h1>{{description}}</h1>
+<h2>{{nameRecipe}}</h2>
+
+
+<table id="tableIng">
+<tr>
+<th style="width:400px;">Ingredients: That I need </th>
+<th style="width:400px;">Ingredients: That I have</th></tr>
+</table>
+
+
+<table style="width:800px;">
+
+<tr><td class= "ingredient" ><img class="pbtnL" src="images/play-left.ico" alt="cooking">1/2 Cups of Self Raising Flour<img class="pbtnR" src="images/play-right.jpg" alt="cooking"></td></tr>
+<tr><td class= "ingredient" ><img class="pbtnL" src="images/play-left.ico" alt="cooking">1 Cup of Greek Yoghurt<img class="pbtnR" src="images/play-right.jpg" alt="cooking"></td></tr>
+<tr><td class= "ingredient"><img class="pbtnL" src="images/play-left.ico" alt="cooking">1 Tsp Baking Powder<img class="pbtnR" src="images/play-right.jpg" alt="cooking"></td></tr>
+<tr><td class= "ingredient"><img class="pbtnL" src="images/play-left.ico" alt="cooking">A Pinch of Salt<img class="pbtnR" src="images/play-right.jpg" alt="cooking"></td></tr>
+<tr><td class= "ingredient"><img class="pbtnL" src="images/play-left.ico" alt="cooking">3 Wild Garlic Leaves - finely sliced<img class="pbtnR" src="images/play-right.jpg" alt="cooking"></td></tr>
+</table>
+
+
+
+<h3>{{HowToCook}}</h3>
+<ol>
+{{#each steps}}
+
+
+<li> {{guide}} </li>
+
+{{/each}}
+</ol>
+
+<!-- <button id='backB'>goback</button> -->
+
+<p>Cookint Time: {{cookingTime}}</p>
+</script>
+
+
+<p id ="JsonIngredients"></p><!-- //better to select the portion of the page not the entire page -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.1/handlebars.min.js'></script>
+<script>
+$(document).ready(function() {
+const recipe = {
+  description: 'Wild Garlic Recipes',
+  nameRecipe: 'Wild Garlic Flat Bread',
+	HowToCook: 'How to Cook',
+	cookingTime: '8 minutes',
+  steps: [
+    {guide: "Add flatbread ingredients to a mixing bowl and combine."},
+	 {guide: "Use clean hands to pat and bring everything together, before tipping the mixture onto a floured surface / board."},
+	  {guide: "Knead to bring together. If the mix will not form into a ball, add a tsp of warm water; and continue to knead."},
+	   {guide: "Once the dough can be shaped into a ball - do so. Before cutting the round into four equal part."},
+	    {guide: "Flatten the quarters with a rolling pan ( or the palm of your hand! ) Until approx 1cm thick."},
+		 {guide: "Heat a griddle pan ( a normal frying pan will do ) to a high heat. Cook one flat bread at a time, for 1 minute on each side. You will know they are done, as they will puff up!"}, 
+		 {guide: "Finish hot flatbreads with a lick of butter. Place in a warm oven to keep warm while you finish the batch."},
+		 
+    
+  ]
+}
+
+let template= Handlebars.compile($('#handlebar').html());
+
+let output = template(recipe);
+$('#JsonIngredients').html(output);
+
+
+
+});
+
+
+
+</script>
+<!--HANDLEBARS PART UP HERE-->
+
+
+
+
+
+
+
+
+
+
+
+<!-- <table>
+
+<tr><td class= "ingredient" ><img class="pbtnL" src="images/play-left.ico" alt="cooking">1/2 Cups of Self Raising Flour<img class="pbtnR" src="images/play-right.jpg" alt="cooking"></td></tr>
+<tr><td class= "ingredient" ><img class="pbtnL" src="images/play-left.ico" alt="cooking">1 Cup of Greek Yoghurt<img class="pbtnR" src="images/play-right.jpg" alt="cooking"></td></tr>
+<tr><td class= "ingredient"><img class="pbtnL" src="images/play-left.ico" alt="cooking">1 Tsp Baking Powder<img class="pbtnR" src="images/play-right.jpg" alt="cooking"></td></tr>
+<tr><td class= "ingredient"><img class="pbtnL" src="images/play-left.ico" alt="cooking">A Pinch of Salt<img class="pbtnR" src="images/play-right.jpg" alt="cooking"></td></tr>
+<tr><td class= "ingredient"><img class="pbtnL" src="images/play-left.ico" alt="cooking">3 Wild Garlic Leaves - finely sliced<img class="pbtnR" src="images/play-right.jpg" alt="cooking"></td></tr>
+
+
+
+
+
+
+
+
+<tr><th>How to cook:</th></tr>
+<tr id='method'>
+<td>
+<ol>
+<li>Add flatbread ingredients to a mixing bowl and combine.</li>
+<li>Use clean hands to pat and bring everything together, before tipping the mixture onto a floured surface / board.</li>
+<li>Knead to bring together. If the mix will not form into a ball, add a tsp of warm water; and continue to knead.</li>
+<li>Once the dough can be shaped into a ball - do so. Before cutting the round into four equal part.</li>
+<li>Flatten the quarters with a rolling pan ( or the palm of your hand! ) Until approx 1cm thick.</li>
+<li>Heat a griddle pan ( a normal frying pan will do ) to a high heat. Cook one flat bread at a time, for 1 minute on each side. You will know they are done, as they will puff up!</li>
+<li>Finish hot flatbreads with a lick of butter. Place in a warm oven to keep warm while you finish the batch.</li>
+
+</ol>
+</td>
+</tr>
+<tr>
+<td>Cooking Time : 8 minutes</td>
+</tr>
+</table> -->
+<blockquote><p> Visit <a href="https://daydreamingfoodie.com/wild-garlic-flatbread/">Day Dreaming Foodie</a> for more recipes like this.</p></blockquote>
+
+
+
+<figure class="ui left floated image">
+<img src="images/wild_garlic_bread.jpg" class="ui rounded large fluid image" alt="Wild Garlic flat bread">
+<figcaption>Flat Bread<br>
+</figcaption>
+</figure>
+
+
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+</article>
+
+
+
+</section>
+ 
+ 
+ 
+
+
+<!-- UI component that we have not covered in class  -->
+<div class="ui center aligned row message">
+  <div class="header ">
+     Be Part of our Club >>> 
+  </div>
+  <p> <a class="item" href="form.html">
+     Click here to go to our Form Page !    
+  </a> </p>
+</div>
+
+<!-- UI component that we have not covered in class  -->
+
+
+
+
+<footer class="ui center aligned row">
+ <div class = "column">
+<p>© 2018 KellyNagyBertels - kellybertels.000webhostapp.com </p>
+
+</div>
+</footer>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>	
+	<script type="text/javascript" src="js/animations.js"></script>
+	<script src="js/jquery.flip.min.js"></script> 
+<script src="js/jquery.easy_slides.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script> 
+
+</body>
+
+</html>
